@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form33: Lower Upper</title>
+  <script>
+    function lowerUpper() {
+      let st1 = document.form1.text1.value;
+      for (let i = 0; i < st1.length; i++) {
+        if (st1.charCodeAt(i) >= 65) {
+          // if (st1.charCodeAt(i) >= 97)
+          st1.charCodeAt(i) += 32;
+          // else st1.charAt(i).toLowerCase();
+        }
+      }
+      document.form1.text2.value = st1;
+  </script>
+</head>
+
+<body onload="document.form1.text1.focus();">
+  <h1>Lower Upper Text</h1>
+  <form name="form1">
+    <input type="text" name="text1" onblur="lowerUpper()" placeholder="Input text...">
+    <input type="text" name="text2" placeholder="Output text">
+  </form>
+</body>
+<style>
+  body {
+    background-color: pink;
+    color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  input {
+    border: 1px solid palevioletred;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 10px;
+  }
+</style>
+
+</html>

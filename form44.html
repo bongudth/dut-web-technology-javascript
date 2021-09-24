@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form44: Select box</title>
+  <script>
+    function changeSelectedIndex() {
+      var st = document.form1.text1.value
+      document.form1.select1.selectedIndex = st
+    }
+  </script>
+</head>
+
+<body onLoad="document.form1.text1.focus();">
+  <div class="container">
+    <h1>Change selected index</h1>
+    <form name="form1" method="" action="">
+      <select name="select1">
+        <option value="Index 0">Index 0</option>
+        <option value="Index 1">Index 1</option>
+        <option value="Index 2">Index 2</option>
+        <option value="Index 3">Index 3</option>
+      </select>
+      <input type="text" name="text1" id="text1">
+      <input type="button" value="Click here" onClick="changeSelectedIndex()">
+    </form>
+  </div>
+</body>
+<style>
+  body {
+    background-color: lightcoral;
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .container {
+    background-color: white;
+    border: 2px solid coral;
+    border-radius: 4px;
+    box-shadow: coral 0px 3px 8px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  input,
+  select {
+    color: coral;
+    font-weight: bold;
+    border: 1px solid coral;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 10px;
+  }
+
+  input[type="button"] {
+    background-color: coral;
+    color: white;
+    width: 80px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover {
+    background-color: lightcoral;
+  }
+</style>
+
+</html>

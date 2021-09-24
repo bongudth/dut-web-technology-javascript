@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Index</title>
+</head>
+
+<body>
+  <iframeset>
+    <iframe name="t1" src="./t1.html"></iframe>
+    <iframeset>
+      <iframe name="t2" target="t3" src="./t2.html"></iframe>
+      <iframe name="t3" target="_self" src="./t3.html"></iframe>
+      <iframe name="t4" src="./t4.html"></iframe>
+    </iframeset>
+    <iframe name="t5" src="./t5.html"></iframe>
+  </iframeset>
+</body>
+<style>
+  body {
+    margin: 0;
+  }
+
+  iframe {
+    border: none;
+  }
+
+  iframe[name="t1"] {
+    height: 150px;
+    width: 100%;
+    background-color: palevioletred;
+  }
+
+  iframe[name="t2"],
+  iframe[name="t4"] {
+    height: 500px;
+    width: 20%;
+    background-color: paleturquoise;
+  }
+
+  iframe[name="t3"] {
+    height: 500px;
+    width: 59.4%;
+    background-color: palegoldenrod;
+  }
+
+  iframe[name="t5"] {
+    height: 125px;
+    width: 100%;
+    background-color: palegreen;
+  }
+</style>
+
+</html>

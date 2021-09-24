@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form11: Login</title>
+  <script>
+    function checkInput() {
+      var a = document.getElementById("username").value;
+      var b = document.getElementById("password").value;
+      if (a == "" || b == "") {
+        alert("Please fill all field!");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form name="form1" method="" action="">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password">
+      <br>
+      <input type="submit" value="OK" onClick="checkInput()">
+      <input type="reset" id="btn-reset" onClick="resetInput()">
+    </form>
+  </div>
+</body>
+<style>
+  body {
+    background-color: lightgreen;
+    color: darkgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .container {
+    background-color: white;
+    border: 2px solid darkgreen;
+    border-radius: 4px;
+    box-shadow: darkgreen 0px 3px 8px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  input {
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 10px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: darkgreen;
+    color: white;
+    width: 80px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: green;
+  }
+</style>
+
+</html>

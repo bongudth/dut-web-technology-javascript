@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form55: Select box</title>
+  <script>
+    function changeInput() {
+      var index = document.form1.select1.selectedIndex;
+      document.form1.text1.value = index
+    }
+  </script>
+</head>
+
+<body onLoad="document.form1.select1.focus();">
+  <div class="container">
+    <h1>Change input</h1>
+    <form name="form1" method="" action="">
+      <select name="select1">
+        <option value="Index 0">Index 0</option>
+        <option value="Index 1">Index 1</option>
+        <option value="Index 2">Index 2</option>
+        <option value="Index 3">Index 3</option>
+      </select>
+      <input type="text" name="text1" id="text1">
+      <input type="button" value="Click here" onClick="changeInput()">
+    </form>
+  </div>
+</body>
+<style>
+  body {
+    background-color: lightgoldenrodyellow;
+    color: goldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .container {
+    background-color: white;
+    border: 2px solid goldenrod;
+    border-radius: 4px;
+    box-shadow: goldenrod 0px 3px 8px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  input,
+  select {
+    color: goldenrod;
+    font-weight: bold;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 10px;
+  }
+
+  input[type="button"] {
+    background-color: goldenrod;
+    color: white;
+    width: 80px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+</style>
+
+</html>
